@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Image from 'next/image'
 
 interface StarshipCardInput {
@@ -28,16 +29,20 @@ export default function StarshipCard({ name, events }: StarshipCardInput) {
   });
 
   return (
-    <div className="flex flex-col flex-nowrap w-24 rounded-md shadow-md m-2">
-      <div className="w-24 ">
-        <Image src="/images/sn9.jpg" width="215" height="420" />
-      </div>
-      <h2 className="font-spacex font-lg font-bold text-center">
-        {name}
-      </h2>
-      <div className="w-24">
-        {displayEvents}
-      </div>
-    </div>
+    <Link href={`/ship/${name.toLowerCase()}`}>
+      <a>
+        <div className="flex flex-col flex-nowrap w-24 m-2">
+          <div className="w-24 ">
+            <Image src="/images/sn9.jpg" width="215" height="420" />
+          </div>
+          <h2 className="font-spacex font-lg font-bold text-center">
+            {name}
+          </h2>
+          <div className="w-24">
+            {displayEvents}
+          </div>
+        </div>
+      </a>
+    </Link>
   )
 }

@@ -9,6 +9,12 @@ module.exports = {
       colors: {
         'spacex-blue': {
           500: '#ff0000'
+        },
+        'starship-blue': {
+          300: 'rgba(101, 106, 178, 255)'
+        },
+        'superheavy-red': {
+          300: 'rgba(202, 77, 81, 255)'
         }
       }
     },

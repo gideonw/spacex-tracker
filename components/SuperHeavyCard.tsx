@@ -28,7 +28,7 @@ export default function SuperHeavyCard({ name, events }: SuperHeavyCardInput) {
   });
 
   return (
-    <div className="flex flex-col flex-nowrap w-24 rounded-md shadow-md m-2">
+    <div className="flex flex-col flex-nowrap w-24 m-2">
       <div className="w-24 ">
         <Image src="/images/sh1.png" width="150" height="565" />
       </div>
